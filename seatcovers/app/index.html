@@ -1,17 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+          <div class="header-top">
+        <div class="header__box">
+          <div class="header__logo"><span>SEAT</span>COVERS</div>
+          <nav class="header__menu">
+            <div class="header__menu-burger">
+              <div class="header__menu-burger-item"></div>
+              <div class="header__menu-burger-item"></div>
+              <div class="header__menu-burger-item"></div>
+            </div>
+            <ul class="header__menu-items">
+              <li class="header__menu-item"><a href="#">О продукции</a></li>
+              <li class="header__menu-item"><a href="#">Материалы</a></li>
+              <li class="header__menu-item"><a href="#">Примеры работ</a></li>
+              <li class="header__menu-item"><a href="#">Установка</a></li>
+              <li class="header__menu-item"><a href="#">Каталог</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__social">
+            <img src="img/icons/telegram.svg" alt="telegram" class="header__social-link"><a href="#"></a></img>
+            <img src="img/icons/facebook.svg" alt="facebook" class="header__social-link"><a href="#"></a></img>
+            <img src="img/icons/instagram.svg" alt="instagram" class="header__social-link"><a href="#"></a></img>
+        </div>
+      </div>
     
+            <!-- <div class="header-bottom">
+                <div class="header-bottom__info">
+                    <h1 class="header-bottom__title">Новый салон 
+                        Вашего автомобиля.
+                        Быстро! Красиво! 
+                        Недорого!
+                    </h1>
+                    <p class="header-bottom__subtitle">Автомобильные чехлы для сидений</p>
+                    <a href="#" class="header-bottom__btn">Заказть звонок</a>
+                    
+                </div>
+                <div class="header-bottom__box">
+                     <img src="img/header-car.png" alt="" class="header-bottom__img">
+                     <div class="header-bottom__map">
+                        <img src="img/icons/map.svg" alt="" class="header-bottom__map-icon">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1287.1159344597438!2d24.0602703!3d49.8193071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473adda2c10f4dc9%3A0x3f99d471a8d12c58!2z0JDQstGC0L7RgtC-0LLQsNGA0Lg!5e0!3m2!1sru!2sua!4v1620983526522!5m2!1sru!2sua" width="473" height="64" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </header>
 
+    <section class="info">
+      <div class="container">
+        <h2 class="info__title title">
+          О продукции
+        </h2>
+        <div class="info__items">
+          <div class="info__items">
+            <div class="info__item">
+              <div class="info__item-img">
+                <img src="img/icons/info-icon-1.svg"></img>
+              </div>
+              <div class="info__item-comment">
+                <h3 class="info__item-title">Точные размеры</h3>
+                <div class="info__item-text">
+                  <p>   Чехлы отшиваются индивидуально
+                    по заводским меркам автомобиля.
+                    </p>
+                    <p>   Полностью повторяют форму кресел.</p>
+                </div>
+              </div>
+            </div>
+            <div class="info__item">
+              <div class="info__item-img">
+                <img src="img/icons/info-icon-2.svg"></img>
+              </div>
+                <div class="info__item-comment">
+                  <h3 class="info__item-title">Гарантия безопасности</h3>
+                  <div class="info__item-text">
+                    <p>   Чехлы "Автопилот" не препятствуют срабатыванию боковых подушек безопасности.</p>
+                    <p>   Предусмотрены технические отверстия для ремней безопасности задних сидений.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="info__item">
+                <div class="info__item-img">
+                  <img src="img/icons/info-icon-3.svg"></img>
+                </div>
+                  <div class="info__item-comment">
+                    <h3 class="info__item-title">Полный функционал салона</h3>
+                    <div class="info__item-text">
+                      <p>   После установки чехлов салон не теряет своей функциональности.</p>
+                      <p>   В чехлах выполнены все необходимые отверстия и вырезы под механизмы сидений.</p>
+                      <p>   Для большинства моделей предусмотрены подлокотники.</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <h2 class="block__title title">Эстетичный вид автомобиля за небольшие деньги! </h2>
+        <div class="block__text">Стоимость комплекта авточехлов 5 мест начинается от <span>135 евро</span> , в отличии от перетяжки салона которая может обойтись Вам в 1000 евро!</div>
+        <div class="block__bg">ВЫГОДНО</div>
+      </div>
+    </section>
+    
+    <section class="materials">
+      <div class="container">
+        <h2 class="materials__title title">Материалы</h2>
+        <ol class="materials__items">
+          <li class="materials__item"> <div class="materials__item-text"><span>Высокое качество</span> <br> 
+            Поверхность чехлов выполнена из высококачественных материалов, что гарантирует долгий срок службы!</div> </li>
+          <li class="materials__item"> <div class="materials__item-text"><span>Шировкий выбор расцветок</span> <br> 
+            Лучшие образцы тканей и комплектующих от ведущих мировых производителей!</div> </li>
+          <li class="materials__item"> <div class="materials__item-text"><span>Устойчивы к загрязнению</span> <br>
+            Чехлы просты в уходе и устойчивы к загрязнениям!</div> </li>
+          <li class="materials__item"> <div class="materials__item-text"><span>Комфорт</span> <br>
+            Материал чехлов дышит, пропуская воздух и не мешая работе подогрева сидений, но при этом не пропускает влагу!</div> </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="options">
+      <div class="container">
+        <div class="options__title title">Центральная часть чехла может быть выполнена
+          из трех типов материала:</div>
+          <div class="options__tabs">
+            <div class="options__tabs-img">
+              <img class="options__tabs-content tab-1 active" src="img/options-1.png" alt="">
+              <img class="options__tabs-content tab-2" src="img/options-2.png" alt="">
+              <img class="options__tabs-content tab-3" src="img/options-3.png" alt="">
+            </div>
+            <div class="options__tabs-link">
+              <div class="options__tabs-link-content active" data-tab="tab-1">
+                <h3 class="options__tabs-title">Экокожа "Аригон" с перфорацией</h3>
+                <div class="options__tabs-text">Высококачественный автомобильный кожзам с перфорацией. </div>
+              </div>
+              <div class="options__tabs-link-content" data-tab="tab-2">
+                <h3 class="options__tabs-title">Алькантара</h3>
+                <div class="options__tabs-text">Искусственная замша. Обладает высокой практичностью и люксовым внешним видом. </div>
+              </div>
+              <div class="options__tabs-link-content" data-tab="tab-3">
+                <h3 class="options__tabs-title">Чистый велюр (федерер)</h3>
+                <div class="options__tabs-text">Плотная велюровая ткань с ячеистой структурой.</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="slider">
+      <div class="container">
+        <div class="slider__title title">Примеры работ</div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/slider-1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slider-2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slider-3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slider-1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slider-2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slider-3.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-instal">
+      <div class="container">
+        <h2 class="block__title block-instal__title">Установить чехол самостоятельно на некоторых автомобилях это действительно непросто даже для опытного мастера, не говоря уже о неподготовленном человеке.  </h2>
+        <div class="block__text">Процесс установки может занять от 2 до 5ч, а так же качественная установка требует подшива чехлов к сидениям автомобиля. Поэтому мы советуем обратиться к нашим специалистам для качественной и правильной установки авто-чехлов.</div>
+          <div class="block__price">Стоимость услуги : 70 евро</div>
+        <div class="block__bg">УСТАНОВКА</div>
+      </div>
+    </section>
+    
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__title title">Каталог</div>
+        <div class="catalog__list">
+          <div class="catalog__btn">
+            <button type="button" data-filter="all">all</button>
+            <button type="button" data-filter=".simple">simple</button>
+            <button type="button" data-filter=".simple-alcantara">simple alcantara</button>
+            <button type="button" data-filter=".advanced">advanced</button>
+            <button type="button" data-filter=".advanced-alcantara">advanced alcantara</button>
+          </div>
+          <div class="catalog__box">
+            <div class="catalog__item mix simple">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix simple-alcantara">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix advanced">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix advanced-alcantara">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix simple">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix simple-alcantara">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix advanced">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix advanced-alcantara">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix simple">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix simple-alcantara">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix advanced">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+            <div class="catalog__item mix advanced-alcantara">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order">
+      <div class="container">
+        <div class="order__wrapper">
+          <div class="order__title title">ОФОРМИТЬ ЗАКАЗ</div>
+          <div class="order__form-wrapper">
+            <form>
+              <input class="order__form-info" type="text" name="firstname" placeholder="Ваше имя" required>
+              <input class="order__form-info" type="tel" name="tel" placeholder="Ваш телефон" required>
+              <input class="order__form-info" type="text" placeholder="Выберите марку автомобиля" required>
+              <input class="order__form-info" type="text" placeholder="Коментарий к заказу">
+              <div class="order__form-checkbox-wrapper">
+                
+                <label class="order__form-checkbox">
+                  <input class="order__form-checkbox-icon" type="checkbox">
+                  <span class="order__form-checkbox-icon--fake"></span>
+                  <span>+ Установка чехлов 70 EUR</span>
+                </label>
+                <p class="order__form-checkbox-img" data-tooltip="Наши мастера помогут установить чехлы на ваш автомобиль"> <img src="img/form-icon.jpg" alt="" ></p>
+              </div> 
+              <input class="order__form-btn" type="submit" value="Заказть" class="btn">
+            </form>
+            <div class="order__form-item">
+              <img src="img/catalog.jpg" alt="catalog.jpg" class="catalog__item-img order__form-item-img">
+              <div class="catalog__item-color">Серый-серый</div>
+              <h2 class="catalog__item-price">135 eur</h2>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
-</body>
+  </body>
 </html>
