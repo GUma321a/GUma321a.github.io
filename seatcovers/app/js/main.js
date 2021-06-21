@@ -77,3 +77,13 @@ const swiper = new Swiper('.swiper-container', {
 
 //////////////////////////////////////////////////////////////
 var mixer = mixitup('.catalog__list');
+//////////////////////////////////////////////////////////////
+const burgerMenu = document.querySelector('.header__menu-burger');
+if (burgerMenu) {
+  const headerMenu = document.querySelector('.header__menu-items');
+  burgerMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle('_lock');
+    burgerMenu.classList.toggle('_active');
+    headerMenu.classList.toggle('_active');
+  });
+}
