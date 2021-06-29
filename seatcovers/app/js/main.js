@@ -52,8 +52,12 @@ const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         centeredSlides: false
       },
-      580: {
+      761: {
         slidesPerView: 2,
+        centeredSlides: false
+      },
+      986: {
+        slidesPerView: 3,
         centeredSlides: false
       },
       1150: {
@@ -91,39 +95,37 @@ var mixer = mixitup('.catalog__list');
 function burgerMenu() {
   let burger = document.querySelector('.header__menu-burger')
   let menu = document.querySelector('.header__menu-items')
+  const body = document.querySelector('body')
+
   burger.addEventListener('click', () => {
     if (!menu.classList.contains('active')) {
-      menu.classList.add('active')
-      burger.classList.add('active-burger')
+      menu.classList.add('active');
+      burger.classList.add('active-burger');
+      document.body.style.overflow = 'hidden';
     } else {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
+      menu.classList.remove('active');
+      burger.classList.remove('active-burger');
+      document.body.style.overflow = 'visible';
     }
   })
+  menu.addEventListener('click', handMenuClick);
+  function handMenuClick(event) {
+    if(event.target instanceof HTMLAnchorElement) {
+      menu.classList.remove('active');
+      burger.classList.remove('active-burger');
+      document.body.style.overflow = 'visible';
+    }
+  }
   // Вот тут мы ставим брейкпоинт навбара
   window.addEventListener('resize', () => {
     if (window.innerWidth > 999) {
         menu.classList.remove('active')
         burger.classList.remove('active-burger')
+        body.classList.remove('_lock')
     }
   })
 }
 burgerMenu()
-
-
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-function fixedNav() {
-const nav = document.querySelector('nav')
-
-// тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-const breakpoint = 500 
-if ( window.scrollY >= breakpoint) {
-  nav.classList.add('fixed__nav')
-} else {
-  nav.classList.remove('fixed__nav')
-}
-}
-// window.addEventListener('scroll', fixedNav)
 /////////////////////////////////////////////////////////////
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -139,3 +141,4 @@ for (let anchor of anchors) {
     })
   })
 }
+

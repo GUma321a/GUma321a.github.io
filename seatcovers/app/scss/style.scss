@@ -358,8 +358,7 @@
       font-weight: 700;
       max-width: 412px;
       width: 100%;
-      margin-top: 8px;
-      margin-bottom: 7px;
+      margin: 8px auto 7px;
     }
     &-text {
       max-width: 552px;
@@ -751,6 +750,16 @@
     margin-top: 0;
   }
 }
+@media (max-width: 1149px){
+  .swiper-slide-active {
+    margin-top: 35px;
+  
+    img {
+      width: 298px;
+      height: 399px;
+    }
+  }
+}
 
 @media (max-width: 999px) {
       .header__menu-burger {
@@ -859,6 +868,15 @@
     form {
       order: 1;
       padding-top: 25px;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .swiper-slide.swiper-slide-active{
+    height: auto;
+    img{
+      height: auto;
+      width: 370px;
     }
   }
 }
