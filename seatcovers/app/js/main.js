@@ -1,6 +1,30 @@
 $(function(){
 
+  'use strict';
 
+  function trackScroll() {
+    var scrolled = window.pageYOffset;
+    var coords = document.documentElement.clientHeight;
+
+    if (scrolled > coords) {
+      goTopBtn.classList.add('back_to_top-show');
+    }
+    if (scrolled < coords) {
+      goTopBtn.classList.remove('back_to_top-show');
+    }
+  }
+
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -80);
+      setTimeout(backToTop, 0);
+    }
+  }
+
+  var goTopBtn = document.querySelector('.back_to_top');
+
+  window.addEventListener('scroll', trackScroll);
+  goTopBtn.addEventListener('click', backToTop);
 
 
 
@@ -65,11 +89,10 @@ const swiper = new Swiper('.swiper-container', {
         centeredSlides: true
       }
     },
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    //   },
-    direction: getDirection(),
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -80,13 +103,6 @@ const swiper = new Swiper('.swiper-container', {
       },
     },
   });
-
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-    return direction;
-  }
 
 //////////////////////////////////////////////////////////////
 var mixer = mixitup('.catalog__list');
