@@ -64,7 +64,8 @@ function js(){                                                //Минифицы
 }
 function scripts(){                                                //Минифицырование js
     return src([
-    'node_modules/jquery/dist/jquery.min.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/mixitup/dist/mixitup.js',
 ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
