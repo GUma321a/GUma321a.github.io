@@ -72,11 +72,26 @@
   }
   &__menu-item {
     transition: all 0.3s;
-    border-bottom: 1px solid $bg;
     height: 22px;
-    border-width: 0px;
-    &:hover {
-      border-width: 1px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      background: $bg;
+      width: 20%;
+      height: 1px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    }
+    &:hover{
+      &::before{
+      opacity: 1;
+      width: 40%;
+      }
     }
   }
   &__social {
@@ -291,6 +306,7 @@
     padding: 0;
   }
   &__item {
+    display: block;
     margin-top: 80px;
     background: linear-gradient(141.26deg, #237cbc 5.31%, #610084 212.81%);
     padding: 97px 39px 39px;
